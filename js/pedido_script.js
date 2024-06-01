@@ -24,7 +24,7 @@ formulario.addEventListener("submit", function(event){
     const cadenaProductoSeleccionado = productoSeleccionado.split('-');
     const costoProductoSeleccionado = cadenaProductoSeleccionado[4].replace(/\$/g, '');
     let productoFinal;
-   
+
     for (let i = 0; i < productos.length; i ++){
         let comp1 = productos[i].nombre.indexOf(cadenaProductoSeleccionado[0].trim());
         let comp2 = productos[i].marca.indexOf(cadenaProductoSeleccionado[3].trim());
