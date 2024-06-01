@@ -21,29 +21,6 @@ class Pedido{
         this.precioFinal = precioFinal;
     }
 
-    calcularEnvio(){
-        console.log("\nSeleccione opción de envío");
-        console.log("*1- Retiro en local");
-        console.log("*2- Zona CABA");
-        console.log("*3- Zona GBA - Todas");
-        console.log("*4- Interior del país");    
-    
-        let opcion = prompt("Ingrese selección: ");
-        switch (opcion) {
-            case "1":
-                return this.envio = 0;
-            case "2":
-                return this.envio = 1200;
-            case "3":
-                return this.envio = 2400;
-            case "4":
-                return this.envio = 5500;
-            default:
-                console.log("Zona no encontrada");
-                return this.envio = 1;
-        }
-    }
-
     mostrarPedido(){
         let precioParcial = this.producto.precio * this.cantidad;
         let impuesto = parseFloat(precioParcial * 0.21);

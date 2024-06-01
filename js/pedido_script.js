@@ -1,60 +1,4 @@
-// seguir = prompt("Ingrese cualquier tecla para realizar un pedido o 'N' para cancelar: ");
-// if (seguir == null){
-//     alert("Pedido terminado");
-//     throw new Error("Pedido terminado");
-// }
-
-// seguir = seguir.toUpperCase();
-// if (seguir== "N"){
-//     console.log("-- Pedido terminado --");
-//     alert("Pedido terminado");
-// }
-
-// while (seguir != 'N'){
-//     console.clear();
-//     pedido();  
-//     const informacionProducto = producto(productos);
-//     if (informacionProducto == null){
-//         alert("Error - Revisa los datos ingresados");
-//         break;
-//     }
-//     else{
-//         nuevoPedido = crearPedido(informacionProducto);
-//         if (nuevoPedido.cantidad > informacionProducto.stock){
-//             alert("Cantidad no disponible");
-//             break;
-//         }
-//         else{
-//             nuevoPedido.calcularEnvio();
-//             if (nuevoPedido.envio == 1){
-//                 alert("Error - Revisa los datos ingresados");
-//                 break;
-//             }
-//             else{
-//                 nuevoPedido.mostrarPedido();
-//                 informacionProducto.stock = informacionProducto.stock - nuevoPedido.cantidad;
-//                 pedidos.push(nuevoPedido);
-//                 for (let j=0; j<pedidos.length; j++){
-//                     console.log(pedidos[j]);
-//                 }
-//             }   
-//         }
-//     }
-
-//     let seguir = prompt("Ingrese cualquier tecla para realizar otro pedido o 'N' para cancelar: ");
-//     if (seguir == null){
-//         alert("Pedido terminado");
-//         throw new Error("Pedido terminado");
-//     }
-//     seguir = seguir.toUpperCase();
-//     if (seguir == "N"){
-//         console.log("-- Pedido terminado --");
-//         alert("Pedido terminado");
-//         break;
-//     }
-// }
-
-var seleccion_1 = document.getElementById('opciones_1');
+const seleccion_1 = document.getElementById('opciones_1');
 
 productos.forEach(objeto => {
     const opcion = document.createElement('option');
@@ -84,12 +28,9 @@ formulario.addEventListener("submit", function(event){
     for (let index = 0; index < productos.length; index ++){
         if (productos[index].nombre.indexOf(cadenaProductoSeleccionado)){
             productoFinal = productos[index];
-            console.log(productoFinal);
             break;
         }
     }
-
-    //const productoFinal = new Producto(cadenaProductoSeleccionado[0],cadenaProductoSeleccionado[1],cadenaProductoSeleccionado[2],cadenaProductoSeleccionado[3],costoProductoSeleccionado,cadenaProductoSeleccionado[5]);
 
     const cantidadSeleccionada = input_1.value;
     if (cantidadSeleccionada > parseInt(productoFinal.stock)){
@@ -108,7 +49,9 @@ formulario.addEventListener("submit", function(event){
 
     nuevoPedido = new Pedido(productoFinal, cantidadSeleccionada, parseFloat(costoEnvioSeleccionado), precioFinalSeleccionado);
     pedidos.push(nuevoPedido);
-
+    console.clear();
+    pedido();
+    nuevoPedido.mostrarPedido();
 
     let contenedor = document.createElement('tr');
     let precioParcial = nuevoPedido.producto.precio * nuevoPedido.cantidad;
@@ -124,16 +67,3 @@ formulario.addEventListener("submit", function(event){
 const tabla_b = document.getElementById('table_b');
 const tablaBody_b = document.createElement('tbody');
 tabla_b.appendChild(tablaBody_b);
-
-// for (const pedido of pedidos) {
-//     let contenedor = document.createElement('tr');
-//     let precioParcial = pedido.producto.precio * pedido.cantidad;
-//     contenedor.innerHTML = `<td> ${pedido.producto.nombre}} </td>
-//                             <td> $${pedido.producto.precio}} </td>
-//                             <td> ${pedido.cantidad} </td>
-//                             <td> $${pedido.envio} </td> 
-//                             <td> $${precioParcial} </td>
-//                             <td> $${pedido.precioFinal} </td>`;
-//     tablaBody_b.appendChild(contenedor);
-// }
-
