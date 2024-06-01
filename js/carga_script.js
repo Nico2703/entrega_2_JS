@@ -4,7 +4,7 @@ const producto2 = new Producto("Pan", "Almacén", "Lactal x 24u", "Fargo", 1830,
 const producto3 = new Producto("Arvejas", "Almacén", "Lata 200grs","Marolio", 670, 15);
 const producto4 = new Producto("Pechuga pollo", "Carnicería", "Bandeja X Kilo", "Granja Iris", 3810, 37);
 const producto5 = new Producto("Manteca", "Frescos", "200grs", "Sancor", 2200, 14);
-const producto6 = new Producto("Leche", "Frescos", "Entera - Larga Vida", "Sancor", 1640, 8);
+const producto6 = new Producto("Leche", "Frescos", "Entera/Larga Vida", "Sancor", 1640, 8);
 productos.push(producto1);
 productos.push(producto2);
 productos.push(producto3);
