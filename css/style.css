@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logohead{
+    margin: 20px 120px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial
+}
+
+nav ul{
+    margin-left: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    justify-content: center;
+}
+
+nav ul li a{
+    font-size: large;
+    color: white;
+    text-decoration-line: none;
+    padding: 40px;
+}
+
+header h2{
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main h3{
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    margin: 40px 0px 10px 100px;
+}
+
+body{
+    background-image: linear-gradient(black, grey, black);
+}
+
+table{
+    color: white;
+    padding: 30px;
+}
+
+#table thead tr th{
+    padding: 10px 0px;
+    text-decoration-line: underline;
+}
+
+#table tbody tr td{
+    padding: 0px 20px;
+}
+
+#table_b thead tr th{
+    padding: 10px 20px;
+    text-decoration-line: underline;
+}
+
+#table_b tbody tr td{
+    padding: 0px 20px;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+}
+
+footer h3{
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form{
+    width: 30%;
+    padding: 50px;
+}
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
