@@ -25,9 +25,10 @@ formulario.addEventListener("submit", function(event){
     const costoProductoSeleccionado = cadenaProductoSeleccionado[4].replace(/\$/g, '');
     let productoFinal;
 
-    for (let index = 0; index < productos.length; index ++){
-        if (productos[index].nombre.indexOf(cadenaProductoSeleccionado)){
-            productoFinal = productos[index];
+    for (let i = 0; i < productos.length; i ++){
+        let numero = productos[i].nombre.indexOf(cadenaProductoSeleccionado[0].trim());
+        if (numero != -1){
+            productoFinal = productos[i];
             break;
         }
     }
@@ -60,7 +61,7 @@ formulario.addEventListener("submit", function(event){
                             <td> ${nuevoPedido.cantidad} </td>
                             <td> $${nuevoPedido.envio} </td> 
                             <td> $${precioParcial} </td>
-                            <td> $${nuevoPedido.precioFinal} </td>`;
+                            <td> $${nuevoPedido.precioFinal.toFixed(2)} </td>`;
     tablaBody_b.appendChild(contenedor);
 });
 
