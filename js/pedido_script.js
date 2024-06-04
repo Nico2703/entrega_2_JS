@@ -23,17 +23,8 @@ formulario.addEventListener("submit", function(event){
     const productoSeleccionado = seleccion_1.value;
     const cadenaProductoSeleccionado = productoSeleccionado.split('-');
     const costoProductoSeleccionado = cadenaProductoSeleccionado[4].replace(/\$/g, '');
-    let productoFinal;
 
-    for (let i = 0; i < productos.length; i ++){
-        let comp1 = productos[i].nombre.indexOf(cadenaProductoSeleccionado[0].trim());
-        let comp2 = productos[i].marca.indexOf(cadenaProductoSeleccionado[3].trim());
-
-        if (comp1 != -1 && comp2 != -1){
-            productoFinal = productos[i];
-            break;
-        }
-    }
+    const productoFinal = productos.find((search) => search.nombre === cadenaProductoSeleccionado[0].trim());
 
     const cantidadSeleccionada = input_1.value;
     if (cantidadSeleccionada > parseInt(productoFinal.stock)){
